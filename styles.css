@@ -1,11 +1,11 @@
-body{
+body {
     padding: 0;
     margin: 0;
     background: #000;
     font-family: sans-serif;
 }
 
-.container{
+.container {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@ body{
     align-items: center;
 }
 
-.card{
+.card {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -23,11 +23,11 @@ body{
     padding: 12px;
     border-radius: 4px;
 }
-.card h2{
+.card h2 {
     font-weight: bolder;
 }
 
-.inputBox{
+.inputBox {
     width: 50%;
     padding: 12px;
     background: #d5d4d4;
@@ -35,7 +35,7 @@ body{
     border: none;
 }
 
-.btnSearch{
+.btnSearch {
     color: #fff;
     width: 30%;
     padding: 12px;
@@ -46,18 +46,18 @@ body{
     border: none;
     cursor: pointer;
 }
-.btnSearch:hover{
+.btnSearch:hover {
     background: rgb(182, 75, 21);
 }
 
-.titleCard{
+.titleCard {
     padding: 12px;
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.title{
+.title {
     text-align: center;
     color: #ffffff;
     font-family: sans-serif;
@@ -65,11 +65,11 @@ body{
     font-weight: bold;
     margin: 0;
 }
-.title span{
+.title span {
     color: #2e8cea;
 }
 
-.desc{
+.desc {
     text-align: center;    
     color: #b3b3b3;
     letter-spacing: 2px;
@@ -79,7 +79,7 @@ body{
 
 /* Output from web  */
 
-.output{
+.output {
     visibility: hidden;
     width: 30%;
     display: flex;
@@ -92,45 +92,114 @@ body{
     background: #043566;
     border-radius: 4px;
 }
-.tempCard{
+.tempCard {
     display: flex;
-    flex-direction:row ;
+    flex-direction: row;
     justify-content: center;
     align-items: self-start;
     font-size: 24px;
     font-weight: bold;
 }
 
-
-#temp{
+#temp {
     margin: 0;
     font-size: 72px;
 }
-#sup{
+#sup {
     color: #fff;
 }
 
-#loc-time{
+#loc-time {
     font-style: italic;
     font-size: 16px;
     letter-spacing: 2px;
 }
 
-.cityNameCard{
+.cityNameCard {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-#city-name{
+#city-name {
     font-size: 16px;
     color: #ffffff;
     padding: 14px;
 }
-#countryName{
+#countryName {
     background: #ec7805;
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 10px;
     text-align: center;
+}
+
+/* Responsive Design */
+
+/* For devices with a max width of 768px (tablets, small desktops) */
+@media (max-width: 768px) {
+    .card {
+        width: 50%; /* Make the card wider for tablets */
+    }
+    
+    .inputBox {
+        width: 70%; /* Make the input box wider */
+    }
+
+    .btnSearch {
+        width: 60%; /* Adjust button size */
+    }
+
+    .title {
+        font-size: 28px; /* Make the title smaller */
+    }
+
+    .output {
+        width: 50%; /* Expand output area */
+    }
+
+    #temp {
+        font-size: 60px; /* Adjust temperature size */
+    }
+
+    #loc-time {
+        font-size: 14px; /* Adjust time font size */
+    }
+}
+
+/* For devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    .card {
+        width: 80%; /* Make card almost full width for phones */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align text to the left */
+    }
+
+    .inputBox {
+        width: 90%; /* Make input box take most of the screen */
+    }
+
+    .btnSearch {
+        width: 80%; /* Adjust button size */
+    }
+
+    .title {
+        font-size: 24px; /* Further reduce title size for mobile */
+    }
+
+    .output {
+        width: 80%; /* Expand output area */
+    }
+
+    #temp {
+        font-size: 48px; /* Adjust temperature size for smaller screens */
+    }
+
+    .cityNameCard {
+        flex-direction: column; /* Stack city and country vertically */
+    }
+
+    #city-name, #countryName {
+        font-size: 14px; /* Smaller text on mobile */
+    }
 }
